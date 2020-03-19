@@ -14,6 +14,7 @@ import org.springframework.context.annotation.Profile;
 
 import java.time.LocalDate;
 import java.util.Arrays;
+import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -106,6 +107,8 @@ public class SeriesMiniProjectApplication {
             season2.setSeries(friends);
 
             seriesRepository.save(friends);
+            List<Series> test = seriesRepository.findAll();
+            System.out.println(test);
         };
     }
 }
